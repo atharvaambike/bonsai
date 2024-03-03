@@ -1,0 +1,759 @@
+*{
+    margin:0;
+    padding:0;
+}
+/*Navbar-section*/
+.navbar{
+    padding-left:100px;
+    padding-right:100px;
+    padding-bottom:0;
+    position:fixed;
+    width:100%;
+    background-color:whitesmoke;
+    z-index:2;
+    
+}
+
+.lower-div-container{
+    display:flex;
+    position:absolute;
+    width:100%;
+    height:50px;
+    padding-top:15px;
+    background-color:whitesmoke;
+    bottom:-40px;
+    left:0px;
+    padding-left:90px;
+    padding-right:90px;
+    z-index:1;
+}
+.lower-div-container2{
+    position:absolute;
+    width:100%;
+    height:50px;
+    background-color:whitesmoke;
+    bottom:-40px;
+    left:0px;
+
+}
+
+.navbar-border{
+    border-bottom:solid 0.1px green;
+    width:95%;
+    position:absolute;
+    bottom:10px;
+    z-index:2;
+    left:0;
+    right:0;
+    margin:auto;
+}
+.lower-div-anchor{
+    margin-left:0.5vw;
+    margin-right:0.5vw;
+    text-decoration:none;
+    color:black;
+}
+.navbar a {
+    text-decoration:none;
+    color:black;
+}
+.navbar a:hover {
+    color:green;
+}
+/*Hand cursor*/
+.hand-cursor{
+    cursor:pointer;
+}
+/*Animation*/
+.lower-div-translateUp{
+    transform:translateY(-20px);
+    z-index:-1;
+    transition:all 0.5s ease-in;
+    opacity:0;
+
+}
+.lower-div-transalteDown{
+    transform:translateY(0px);
+    transition:all 0.75s ease-in;
+    opacity:1;
+}
+.lower-div-container2-heightAnimation{
+    transform:scaleY(0);
+    transition:all 0.75s ease-in-out;
+    transform-origin:top ;
+}
+.navbar-border-collapse{
+    transform:scaleX(0);
+    transition:all 0.5s ease-in-out;
+}
+.navbar-border-uncollapse{
+    transform:scaleX(1);
+    transition:all 0.5s ease-in-out;
+}
+.nav-link{
+    padding:20px;
+}
+#dropdown-product-button{
+    display:none;
+}
+#dropdown-industries-button{
+    display:none;
+}
+/*Hover div*/
+
+.flex-container{
+    display:flex;
+    column-gap:100px;
+    z-index:3;
+}
+.hide{
+    display:none;
+}
+/*Product*/
+
+#product{
+   position:absolute;
+   width:100%;
+   left:0;
+   padding-top:50px;
+   padding-left:200px;
+   padding-right:200px;
+   background-color:#fff;
+   top:63px;
+}
+
+/*Industries*/
+#industries{
+    position:absolute;
+    width:100%;
+    left:0;
+    padding-top:50px;
+    padding-left:200px;
+    padding-right:200px;
+    background-color:#fff;
+    top:63px;
+}
+#templates{
+    position:absolute;
+    width:100%;
+    left:0;
+    padding-top:50px;
+    padding-left:200px;
+    padding-right:200px;
+    background-color:#fff;
+    top:63px;
+}
+.hover-list{
+    list-style:none;
+    padding:0px;
+}
+.hover-list-a{
+    text-decoration:none;
+    color:grey;
+}
+.hover-list-a:hover{
+    color:green;
+}
+.hover-list-img{
+    width:5vw;
+    height:5vw;
+}
+/*Learn-more underline Animation*/
+.learnMore{
+    position:relative;
+}
+.learnMore:after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background-color:green;
+    transform:scaleX(0);
+    transition:transform 0.5s ease-in-out;
+    transform-origin:bottom right;
+}
+.learnMore:hover::after{
+    transform:scaleX(1);
+    transform-origin:bottom left;
+}
+/*Pricing section*/
+.pricing-div{
+    position:relative;
+    top:200px;
+    width:80vw;
+    margin:auto;
+    text-align:center;
+}
+.pricing-heading{
+    margin:auto;
+    max-width:40vw;
+}
+.pricing-heading-text{
+    font-weight:700;
+}
+
+div input{
+    display:none;
+}
+.switch-span{
+    text-decoration:none;
+    color:black;
+    margin:0 1vw;
+}
+
+.left-item{
+    position:relative;
+    margin:0.5vw 4vw;
+    float:left;
+    z-index:1;
+}
+.right-item{
+    position:relative;
+    margin:0.5vw 4vw;
+    float:right;
+    z-index:1;
+}
+
+div label{
+    display:block; /*Else height , width won't set if not written*/
+    position:relative;
+    height:50px;
+    width:450px;
+    background-color:#82CD47;
+    border-radius:40px;
+    text-align:center;
+}
+
+div label:before{
+    display:block;
+    position:absolute;
+    left:5px;
+    top:0;
+    bottom:0;
+    margin:auto;
+    content:"";
+    width:200px;
+    height:40px;
+    background-color:whitesmoke;
+    border-radius:50px;
+   
+}
+/*To change color of toggle switch when it is in checked statew*/
+/* div input:checked +label{
+  background-color:#379237;
+  transition:background-color 300ms linear;
+} */
+div input:checked + label:before{
+    left:240px;
+    transition:left 300ms linear;
+}
+/*When input is uncheckedi*/
+div input:not(:checked) + label:before{
+    transition:all 300ms linear;
+}
+.toggle-switch{
+    width:450px;  
+    margin:3vw auto;
+    
+}
+/*Plan container*/
+.plans-container{
+    display:flex;
+    height:80vh;
+    flex-wrap:wrap;
+    column-gap:20px;
+    margin-top:100px;
+}
+.plan-permonth{
+font-weight:lighter;
+}
+.flex-items{
+    text-align:center;
+    border-radius:5%;
+
+}
+.item1{
+    flex-basis:28%;
+    background-color:#B2A4FF;
+    height:95%;
+}
+.item2{
+    position:relative;
+    flex-basis:39%;
+    background-color:#fff;
+}
+.orange-div{
+    background-color:orange;
+    top:-30px;
+    left:-9px;
+    height:107%;
+    width:104%;
+    position:absolute;
+    border-radius:5%;
+    z-index:-1;
+}
+
+.item3{
+    flex-basis:28%;
+    background-color: yellow;
+    height:95%;
+}
+.plan-item-heading{
+    margin-top:20px;
+    margin-bottom:10px;
+}
+.plan-paragraph{
+    width:90%;
+    margin:2vw auto;
+}
+.plan-button{
+    margin:15px 0;
+}
+/*plan-list items*/
+.plan-list{
+    list-style:none;
+    padding:0;
+}
+.plan-list-li{
+    position:relative;
+    height:30px;
+}
+.checked-icon{
+      float:left;
+      height:100%;
+      width:20px;
+}
+.plan-list-div{
+    width:90%;
+    margin:auto;
+}
+
+/*Year section*/
+/* #plans-container-2{
+    display:none;
+} */
+.plans-container{
+    transition:all 0.5s ease;
+}
+#plans-container-1{
+    transition:opacity 2s ease-in-out;
+}
+.show{
+    /* display:flex; */
+      /*As our plans container is flex so if we use block concept then it won't work therfore use flex bz it is a flex contianer and we are changing it to block then all properties of flex gets lost in that container and it will look like a mess*/
+    animation:fade 0.5s ;
+
+}
+
+.hide{
+    display:none;
+    /* opacity:0; */
+}
+
+/*Month section*/
+#month-section{
+    height:1200px;
+    overflow:clip;
+}
+
+/*Next level plans section*/
+.next-level-div{
+    width:85%;
+    margin:auto;
+    position:relative;
+    text-align:center;
+
+    
+}
+.next-level-heading{
+    width:30%;
+    text-align:center;
+    margin:auto;
+    font-weight:bold;
+}
+.next-level-heading-div{
+    text-align:center;
+}
+.next-level-container{
+    display:flex;
+    column-gap:2vw;
+    text-align:left;
+    flex-wrap:wrap;
+    margin:3vw;
+}
+.card{
+    height:300px;
+    border-radius:20px;
+}
+.next-level-item1{
+    flex-basis:30%;
+}
+.next-level-item2{
+    flex-basis:30%;
+}
+.next-level-item3{
+    flex-basis:30%;
+}
+
+.next-level-bottom{
+    position:absolute;
+    bottom:1vw;
+    right:2vw;
+}
+.next-level-list{
+    text-decoration: none;
+    color:black;
+}
+/*Frequently asked section*/
+#frequently-asked-section{
+    position:relative;
+    overflow-x:clip;
+}
+.frequently-asked-div{
+    width:45%;
+    margin-top:10vw;
+    margin-left:15%;
+}
+.faq-heading{
+    display:inline;
+}
+.faq-dropdown-img{
+    width:1.5vw;
+    height:1.5vw;
+    margin-left:auto;
+}
+
+.faq-div-outside{
+    height:50px;
+}
+.faq-div-items{
+    display:flex;
+    flex-wrap:wrap;
+    min-height:80px;
+    height:auto;
+    border-bottom:0.25px solid grey;
+    align-items: center;
+
+}
+.faq-div-item{
+    display:flex;
+    min-height:80px;
+    height:auto;
+    flex-wrap:wrap;
+    align-items:center;
+    width:100%;
+}
+.faq-section-treeimg{
+    position:absolute;
+    width:600px;
+    height:600px;
+    right:-200px;
+    top:0;
+}
+.hideItem{
+    display:none;
+}
+.faq-para{
+    flex-basis:100%;
+}
+.faq-div-items{
+    position:relative;
+}
+/*adding paragraph when click on faq dropdown*/
+.faq-div-item1:after{
+    content:"When you start your trial with Bonsai you'll receive full, unlimited access to the plan you chose. You will need to enter your credit card information to begin your trial, but don't worry - we won't charge you anything until the trial ends. You can cancel at any time during the trial period via your Subscriptions settings.";
+    
+}
+.faq-div-item2:after{
+    content:"Yes, you can upgrade, downgrade or cancel your plan at any time via your Subscription settings.";
+
+}
+.faq-div-item3:after{
+    content:"Yes, the IRS allows for tax deduction for software you use to run your business. Bonsai's expense tracking even automatically categorizes your subscription as a deductible software expense.";
+}
+.faq-div-item4:after{
+    content:"If you contact us within two weeks of being charged for your subscription, we will be happy to issue a refund for you. Beyond those two weeks, you will need to cancel or modify the subscription from the Subscriptions tab in Settings to avoid future charges, but refunds will not be issued. This applies to both monthly and annual plans.";
+}
+.faq-dropdown-img-animation{
+    transform:rotate(180deg);
+    transition:transform 0.25s ease-in-out;
+}
+
+
+/*trusted section*/
+#trusted-section{
+    margin:10vw 0;
+}
+.trusted-section-heading{
+    font-weight:bold;
+    margin:2vw;
+}
+.trusted-img{
+    height:50px;
+    width:300px;
+}
+.trusted-div{
+    width:85%;
+    margin:auto;
+    text-align:center;
+}
+/*flexbox bricks section*/
+.flexbox-bricks{
+    display:flex;
+    column-gap:20px;
+    margin:30px;
+}
+.bricks-div{
+    display:flex;
+    height:50px;
+    background-color:palegreen;
+    border-radius:10px;
+    align-items:center;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+/*Hep section*/
+#help-section{
+    margin-top:100px;
+    margin-bottom:100px;
+}
+.help-section-div{
+    display:flex;
+    width:65%;
+    margin:auto;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+.help-section-inner-div{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    flex-basis:40%;
+}
+.help-img1{
+    width:500px;
+    height:500px;
+}
+.help-img2{
+    width:200px;
+    height:200px;
+    position:absolute;
+    right:20px;
+    top:0;
+    transform:rotate();
+}
+.help-flex-item1{
+    position: relative;
+}
+.help-section-2ndrow-1stdiv{
+    height:200px;
+}
+.help-section-div h2{
+    width:80%;
+}
+
+/*Copyright section*/
+#copyright-section{
+    width:90%;
+    margin:auto;
+}
+.copyright-section-links{
+    float:left;
+    height:100%;
+    margin:5px;
+}
+.copyright-section-para{
+    float:right;
+    height:100%;
+    margin:5px;
+}
+.cp-bottom-para{
+    width:90%;
+    margin:auto;
+   
+}
+.copyright-upper-div{
+    width:100%;
+    height:50px;
+    position:relative;
+}
+
+
+
+
+
+
+
+/*KeyFrames*/
+/*To add fade animation when we toggle switch between month and year*/
+@keyframes fade{
+    0% {opacity:0;}
+    25% {opacity:0.25;}
+    50% {opacity:0.50;}
+    75% {opacity:0.75;}
+    100% {opacity:1;}
+}
+
+
+
+
+
+/*MediaQueries*/
+@media (max-width:991.20px)
+{
+    /*Navbar-section*/
+    .navbar{
+       padding-left:30px;
+       padding-right:30px;
+       margin:0;
+    }
+    #product{
+        display:none;
+    }
+    #templates{
+        display:none;
+    }
+    #industries{
+        display:none;
+    }
+    .lower-div-container{
+        display:none;
+    }
+    .lower-div-container2{
+        display:none;
+    }
+    .navbar-border{
+        display:none;
+    }
+    .underline-border{
+        border-bottom:solid black 0.5px;
+    }
+    /*Product*/
+    #dropdown-product-button{
+        display:block;
+    }
+    #dropdown-product-button{
+        float:right;
+    }
+    #product-mobile-div{
+        display:none;
+    }
+    .product-mobile-list{
+        text-decoration:none;
+        list-style:none;
+    }
+    /*industries*/
+    #dropdown-industries-button{
+        display:block;
+    }
+    #dropdown-industries-button{
+        float:right;
+    }
+    .rotateButtonToup{
+        transform:rotate(180deg);
+        transition:transform 0.5s ease-in-out;
+    }
+    .rotateButtonTodown{
+        transform:rotate(0deg);
+        transition:transform 0.5s ease-in-out;
+    }
+    
+    .navbar-collapse{
+        max-height:500px;
+        overflow:scroll;
+    }
+ 
+    /*Pricing section*/
+    .pricing-div{
+        width:100vw;
+        top:100px;
+      
+    }
+    .pricing-heading{
+        max-width:90vw;
+    }
+    .left-item{
+        margin:1.5vw 10vw;
+    }
+    .right-item{
+        margin:1.5vw 10vw;
+    }
+    /*plans container*/
+     .plans-container{
+        justify-content:center;
+        row-gap:5vw;
+     }
+     .flex-items{
+        flex-basis:90%;
+     }
+     .item2{
+        margin-top:50px;
+     }
+     .orange-div{
+        height:110%;
+     }
+     /*Month section*/
+     #month-section{
+        height:2000px;
+     }
+     /*Next level section*/
+     .next-level-div{
+        width:95%;
+     }
+     .next-level-heading{
+        width:80%;
+     }
+     
+     .next-level-container-items{
+        flex-basis:100%;
+        margin:2vw;
+     }
+     /*Faq section*/
+     .frequently-asked-div{
+        width:80%;
+        margin:auto;
+     }
+     .faq-section-treeimg{
+        display:none;
+     }
+     .faq-dropdown-img{
+        width:15px;
+        height:15px;
+     }
+     /*Trusted section*/
+     .trusted-div{
+        width:90%;
+     }
+     .trusted-img{
+        margin:10px 0;
+     }
+     /*flexbox bricks*/
+     .flexbox-bricks{
+        width:1500px;
+     }
+     
+     #bricks-section{
+        overflow:scroll;
+     }
+     /*Help section*/
+     .help-flex-item1{
+        flex-basis:100%;
+     }
+     .help-flex-item2{
+        flex-basis:100%;
+     }
+     .help-img1{
+        width:350px;
+        height:350px;
+     }
+     .help-img2{
+        width:150px;
+        height:150px;
+     }
+     .help-section-div h2{
+        width:100%;
+     }
+}
